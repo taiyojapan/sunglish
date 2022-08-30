@@ -1,0 +1,287 @@
+@use '../style/variables' as v;
+
+.top {
+    width: 100%;
+    height: 100vh;
+    z-index: -6;
+    
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/a.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -100;
+    }
+
+    &__text {
+        text-align: center;
+        padding-top: 110px;
+
+        &__title {
+            font-weight: 300;
+            font-size: 3.8rem;
+            & span {
+                font-size: 2.7rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.8rem;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+
+    &__image {
+        text-align: center;
+        & img {
+            max-width: 380px;
+            // max-width: 450px;
+        }
+    }
+
+    &__button {
+        margin-top: 60px;
+        text-align: center;
+
+        &__free {
+            padding: 10px 20px;
+            background-color: #bc0f0f;
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-radius: 50px;
+            transition: 0.8s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__illust {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+
+        & li {
+            display: inline;
+        }
+
+        & img {
+            opacity: .5;
+        }
+
+        &__1 {
+            width: 210px;
+            position: fixed;
+            top: 60%;
+            right: 0%;
+            animation: anime1 22s ease infinite;
+        } 
+
+        @keyframes anime1 {
+            0%  {transform: translate(0px, 0px);}
+            35%  {transform: translate(-100px, 10px);}
+            70%  {transform: translate(-10px, 30px);}
+            100%  {transform: translate(0px, 0px);}
+        }
+
+        &__2 {
+            width: 210px;
+            position: fixed;
+            top: 30%;
+            left: 0%;
+            animation: anime2 20s ease infinite;
+        }
+
+        @keyframes anime2 {
+            0%  {transform: translate(0px, 0px);}
+            35% {transform: translate(80px, -20px);}
+            70% {transform: translate(20px, -35px);}
+            100%{transform: translate(0px, 0px);}
+        }
+
+        &__3 {
+            width: 170px;
+            position: fixed;
+            top: 23%;
+            right: 0%;
+            animation: anime3 20s ease infinite;
+        }
+
+        @keyframes anime3 {
+            0%  {transform: translate(0px, 0px);}
+            35% {transform: translate(-50px, 20px);}
+            70% {transform: translate(-10px, 40px);}
+            100%{transform: translate(0px);}
+        }
+
+        &__4 {
+            width: 170px;
+            position: fixed;
+            top: 73%;
+            left: 0%;
+            animation: anime4 20s ease infinite;
+        }
+
+        @keyframes anime4 {
+            0%  {transform: translate(0px, 0px);}
+            35% {transform: translate(100px, 40px);}
+            70% {transform: translate(30px, 10px);}
+            100%{transform: translate(0px, 0px);}
+        }
+
+        &__5 {
+            width: 170px;
+            position: fixed;
+            top: 5%;
+            left: 0%;
+            animation: anime5 25s ease infinite;
+        }
+
+        @keyframes anime5 {
+            0%  {transform: translate(0px, 0px);}
+            35%  {transform: translate(80px, 60px);}
+            70%  {transform: translate(10px, -30px);}
+            100%  {transform: translate(0px, 0px);}
+        }
+
+        &__6 {
+            width: 200px;
+            position: fixed;
+            bottom: 0%;
+            left: 30%;
+            animation: anime6 20s ease infinite;
+        }
+
+        @keyframes anime6 {
+            0%  {transform: translate(0px, 0px);}
+            35%  {transform: translate(50px, -25px);}
+            70%  {transform: translate(20px, -30px);}
+            100%  {transform: translate(0px, 0px);}
+        }
+
+    }
+
+    &__up {
+        padding: 15px;
+        border: .7px solid v.$cWhite;
+        background-color: rgba($color: #efe7e7, $alpha: .8);
+        color: rgba($color: #473737, $alpha: .7);
+        position: fixed;
+        bottom: 29px;
+        right: 10px;
+        opacity: 0;
+        transition: all .8s;
+        cursor: pointer;
+        z-index: 30;
+    }
+    
+    .scrollIn {
+        opacity: 1;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+    
+}
+
+@include v.mq(lt) {
+    .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__text {
+            margin-left: 15px;
+
+            &__button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #bc0f0f;
+                font-size: 1.6rem;
+                font-weight: 400;
+                border-radius: 50px;
+                transition: 0.5s;
+                margin-top: 30px;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+
+        &__image {
+            & img {
+                max-width: 580px;
+                // max-height: 580px;
+            }
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__illust {
+            
+            &__1 {
+                width: 300px;
+            } 
+        
+            &__2 {
+                width: 290px;
+                top: 22%;
+            }
+        
+            &__3 {
+                width: 250px;
+                top: 15%;
+            }
+
+            &__4 {
+                width: 230px;
+                top: 55%;
+                left: 10%;
+            }
+
+            &__5 {
+                width: 200px;
+                top: 10%;
+                left: 20%;
+            }
+
+            &__6 {
+                width: 250px;
+            }
+        }
+    } 
+}
+
+@include v.mq(se) {
+    .top {
+        &__text {
+            padding-top: 90px;
+        }
+
+        &__image {
+            & img {
+                width: 330px;
+            }
+        }
+
+        &__button {
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use '../style/variables' as v;
+
+.result {
+    color: v.$cMainColor;
+    height: 100%;
+    background-color: #ffa425;
+    text-align: center;
+    padding: 0 4%;
+
+    &__title {
+        padding-top: 50px;
+        font-size: 3rem;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+    }
+
+    &__box {
+        margin-top: 30px;
+
+        &__text {
+            font-size: 2rem;
+            & span {
+                margin: 10px 0px 20px 0px;
+                display: block;
+            }
+        }
+
+        &__back {
+            display: block;
+            margin: 40px auto;
+            font-size: 1.8rem;
+            padding: 5px 15px;
+            border: none;
+            color: v.$cSubColor;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            box-shadow: 3px 3px 0px rgb(0 0 0 / 60%);
+            transition: all .3s;
+
+            &:hover {
+                box-shadow: none;
+                transform: translate(3px, 3px);
+            }
+        }
+
+        &__button {
+            font-size: 1.8rem;
+            padding: 5px 15px;
+            color: v.$cSubColor;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            box-shadow: 3px 3px 0px rgb(0 0 0 / 60%);
+            transition: all .3s;
+            margin-bottom: 40px;
+            border: none;
+
+            &:hover {
+                box-shadow: none;
+                transform: translate(3px, 3px);
+            }
+        }
+    }
+}
+

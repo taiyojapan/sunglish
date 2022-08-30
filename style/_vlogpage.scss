@@ -1,0 +1,12 @@
+@use '../style/variables' as v;
+
+.vlogPage__content {
+    &__title {
+        text-align: center;
+    }
+}
+
+.vlog__title {
+    margin-top: 30px;
+}
+

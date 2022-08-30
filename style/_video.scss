@@ -1,0 +1,30 @@
+@use '../style/variables' as v;
+
+.video__content {
+    margin-top: 40px;
+
+    &__image {
+        width: 80%;
+        display: block;
+        margin: 0px auto; 
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:nth-child(2) {
+            margin-top: 25px;
+        }
+    }
+}
+
+@include v.mq(lt) {
+    .video__content {
+        margin-top: 50px;
+
+        &__image {
+            width: 60%;
+            &:nth-child(2) {
+                margin-top: 40px;
+            }
+        }
+    }
+}

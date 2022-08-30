@@ -1,0 +1,148 @@
+@use '../style/variables' as v;
+
+.aboutPage__content {
+    &__title {
+        text-align: center;
+    }
+
+    &__box {
+        margin-top: 30px;
+    }
+}
+
+.balloon {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+
+
+    &__faceicon {
+        float: left;
+        margin-right: -90px;
+        width: 80px;
+
+        & img{
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    &__chatting {
+        width: 100%;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: 1s ;
+
+        &__says {
+            display: inline-block;
+            position: relative; 
+            margin: 10px 0px 0px 110px;
+            padding: 17px 13px;
+            border-radius: 10px;
+            color: v.$cSubColor;
+            background-color: rgba(231, 231, 231, 0.8);
+            & p {
+                & span {
+                    display: block;
+                    text-align: right;
+                    margin-top: 10px;
+                }
+            }
+
+            &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 18px; 
+                left: -24px;
+                border: 12px solid transparent;
+                border-right: 12px solid rgba(231, 231, 231, 0.8);
+            }
+        }
+    }
+
+    &__faceicon2 {
+        float: right;
+        margin-left: -90px;
+        width: 80px;
+
+        & img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    &__chatting2 {
+        width: 100%;
+        text-align: left;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: 1s ;
+
+        &__says {
+            display: inline-block;
+            position: relative;
+            margin: 10px 110px 0px 0px;
+            padding: 17px 13px;
+            border-radius: 10px;
+            color: v.$cSubColor;
+            background-color: rgba(231, 231, 231, 0.8);
+
+            & p {
+                // text-align: right;
+                & span {
+                    display: block;
+                    text-align: right;
+                    margin-top: 10px;
+                }
+            }
+
+            &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 18px;
+                right: -24px;
+                border: 12px solid transparent;
+                border-left: 12px solid rgba(231, 231, 231, 0.8);
+            } 
+        }
+    }
+}
+
+.inView2 {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.inView3 {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.company__overview {
+    margin-top: 50px;
+}
+
+
+@include v.mq(lt) {
+    .aboutPage__content {
+    
+        &__box {
+            margin-top: 50px;
+        }
+    }
+
+    .balloon {
+        &__chatting {
+            width: 70%;
+        }
+
+        &__chatting2 {
+            width: 70%;
+            margin-left: auto;
+        }
+    }
+}

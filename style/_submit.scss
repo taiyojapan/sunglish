@@ -1,0 +1,16 @@
+@use '../style/variables' as v;
+
+.submit {
+    color: v.$cMainColor;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffa425;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__subtitle {
+        display: block;
+    }
+}

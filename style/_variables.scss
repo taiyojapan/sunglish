@@ -1,0 +1,25 @@
+$cMainBackgroundcolor:#5fc1d8;
+// #cceaff
+$cMainColor: #fff;
+$cSubColor: #0e0c0c;
+$cWhite: #fff;
+$cBlack: #000;
+$cMenuClose: $cBlack;
+$cMenuOpen: $cBlack;
+$cMainFont: 'Roboto', sans-serif;
+$cMainWeight: 300;
+$cMainSubWeight: 500;
+
+
+// メディアクエリー
+$breakpoint: (
+  lt: 'screen and (min-width:960px)',
+  ta: 'screen and (max-width:600px)',
+  ta2: 'screen and (min-width:600px)',
+  se: 'screen and (max-width:375px)',
+);
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}

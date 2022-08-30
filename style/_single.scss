@@ -1,0 +1,50 @@
+@use '../style/variables' as v;
+
+.single_thumbnail {
+    display: none;
+}
+
+.single_content {
+    padding-top: 100px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.wp-block-media-text__media {
+    margin: 20px 0 !important;
+}
+
+
+
+// .wp-block-image {
+//     margin: 30px 0 !important;
+// }
+
+.another {
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+.another__posts {
+    margin-top: 15px;
+}
+
+
+@include v.mq(ta) { 
+    .wp-block-media-text__content {
+        padding: 0px !important;
+    }
+}
+
+@include v.mq(ta2) {   
+    .wp-block-media-text {
+        margin-top: 40px;
+    }
+}
+
+
+
+
+
+
+

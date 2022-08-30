@@ -1,0 +1,71 @@
+@use '../style/variables' as v;
+
+.news__boxs {
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+}
+
+// .new {
+//     color: #bc0f0f;
+// }
+
+.news__box {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(231, 231, 231, 0.8);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ;
+}
+
+.news__post {
+    
+    & img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+.news__words {
+    margin-left: 20px;
+    color: #0e0c0c;
+}
+
+.top__date {
+    font-size: 1.2rem;
+}
+
+.top__article__new {
+    font-size: 1.6rem;
+}
+
+.inView {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
